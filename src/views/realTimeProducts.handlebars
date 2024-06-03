@@ -1,0 +1,51 @@
+
+
+
+<div class="container">
+    <h1 class="text-center" style="color: #fffff;">Entrega 2</h1>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="add-tab" data-bs-toggle="tab" data-bs-target="#add" type="button" role="tab" aria-controls="add" aria-selected="true">Agregar producto</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="delete-tab" data-bs-toggle="tab" data-bs-target="#delete" type="button" role="tab" aria-controls="delete" aria-selected="false">Eliminar producto</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="add" role="tabpanel" aria-labelledby="add-tab">
+            <form id="addForm">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Nombre Producto</label>
+                    <input type="text" class="form-control" name="title" id="title" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción</label>
+                    <input type="text" class="form-control" name="description" id="description" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio</label>
+                    <input type="number" class="form-control" name="price" id="price" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar producto</button>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
+            <form id="deleteForm">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id Producto</label>
+                    <input type="text" class="form-control" name="id" id="id" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Eliminar producto</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{{!mostramos todos los productos en el div con id productList}}
+<div id="productList" class="d-flex flex-row flex-wrap gap-2"></div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
