@@ -63,7 +63,7 @@ deleteForm.addEventListener('submit', async (e) => {
     deleteForm.reset();
     socket.emit('getProducts');
 });
-
+n
 //recibir los productos
 //const productList = document.getElementById('productList');
 
