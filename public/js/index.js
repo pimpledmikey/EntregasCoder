@@ -74,6 +74,9 @@ socket.on("products", (data) => {
         const card = document.createElement("div");
         card.classList.add("card", "flex-fill", "bg-dark", "text-white");
         card.style.width = "18rem";
+        card.style.borderRadius = "5px"; // Hace que el borde sea un poco redondeado
+        card.style.border = "1px solid white"; // Agrega un borde blanco
+        card.style.margin = "5px"; // Agrega un margen de 10px
         card.innerHTML = `
       <div class="card-body">
         <h5 class="card-title">${product.title}</h5>

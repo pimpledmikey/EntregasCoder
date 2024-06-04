@@ -22,14 +22,14 @@ app.use("/api", apiRoutes);
 app.use("/",viewsRoutes);
 
 const httpServer = app.listen(PORT, () => {
-    console.log(`Server on port ${PORT}`);
+    console.log(`Servidor en el puerto: ${PORT}`);
 });
 
 
 //configurar socket
 export const io = new Server(httpServer);
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log('a Usuario conectado');
 
     socket.on('getProducts', async () => {
         const products = await productManager.getProducts();
